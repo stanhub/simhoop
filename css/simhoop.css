@@ -1,0 +1,186 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+}
+
+#content {
+	margin: 10px 50px 50px 50px;
+}
+
+h1 {
+	font-size: 44px;
+	font-weight: 800;
+	margin: 0px 0px 10px -3px;
+}
+
+.info {
+	margin-bottom: 15px;
+}
+
+.info p {
+	margin: 5px 0px;
+}
+
+a {
+	color: #EF7203;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* **********
+SECTIONS
+********** */
+
+.section_title {
+	font-size: 16px;
+	margin: 20px 0px;
+}
+
+.section_title a {
+	color: #000000;
+}
+
+.section_title_icon {
+	color: #EF7203;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 12px;
+}
+
+/* **********
+TABS
+********** */
+
+.tabs {
+	list-style: none;
+	padding-bottom: 7px;
+}
+
+.tabs li {
+	border: 1px solid #DDDDDD;
+	border-radius: 3px 3px 0 0;
+	display: inline;
+	font-size: 12px;
+	line-height: 12px;
+	list-style-type: none;
+	padding: 5px;
+	text-align: center;
+}
+
+.tabs li:hover { background-color: #EF7203; }
+
+.tabs li:hover a { color: #DDDDDD; }
+
+.tabs li.active {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+/* **********
+TABLES
+********** */
+
+table {
+	border-bottom: 2px solid #999999;
+	border-left: 1px solid #DDDDDD;
+	border-right: 2px solid #999999;
+	border-top: 1px solid #DDDDDD;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 10px;
+	line-height: 24px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+tr {
+	border-top: 1px solid #DDDDDD;
+}
+
+tr.partial { 
+	background-color: #EEEEEE;
+	display: table-row;
+}
+tr.partial.partial_hidden { display: none; }
+
+tr:hover {
+	background-color: #EF7203;
+	color: #000000;
+}
+
+tr.selected { background-color: #2C95DD; }
+
+tr:hover a,
+tr.selected a { color: #DDDDDD; }
+
+th.headerSortDown::after { content: '\25bc'; }
+th.headerSortUp::after { content: '\25b2'; }
+
+td, th { padding: 3px; }
+
+td {
+	border-left: 1px solid #DDDDDD;
+	border-right: 1px solid #DDDDDD;
+}
+
+th {
+	background-color: #000000;
+	color: #ffffff;
+}
+
+td.border_right { border-right: 1px solid #999999; }
+
+/* **********
+PLAYER overrides
+********** */
+
+#player #tab-notes thead th:nth-of-type( 11 ) { width: 825px; } /* notes column */
+
+/* **********
+TEAM overrides
+********** */
+
+#team #tab-notes thead th:nth-of-type( 11 ) { width: 825px; } /* notes column */
+
+/* **********
+MISCELLANEOUS
+********** */
+
+b { font-weight: bold; }
+
+.collapsed { display: none; }
+
+.help_icon {
+	background-color: #2C95DD;
+	border-radius: 50%;
+	color: #FFFFFF;
+	font-size: 8px;
+	padding: 2px 4px;
+}
+
+.hidden { display: none; }
+
+.italics { font-style: italic }
+
+.small { font-size: 75%; }
+
+.text_center { text-align: center; }
+.text_left { text-align: left; }
+.text_right { text-align: right; }
+
+.tool_tip {
+	background-color: #EF7203;
+	border: 1px solid #333333;
+	border-radius: 5px;
+	color: #FFFFFF;
+	display: none;
+	font-size: 12px;
+	padding: 10px;
+	position: absolute;
+	max-width: 150px;
+}
