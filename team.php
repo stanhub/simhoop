@@ -777,6 +777,11 @@
 					<th title="Weight">Wt</th>
 					<th class="text_center" title="Position">Pos</th>
 					<th class="text_center" title="Real Position">Pos*</th>
+					<th title="Percentage of Playing Time at Point Guard">PG</td>
+					<th title="Percentage of Playing Time at Shooting Guard">SG</td>
+					<th title="Percentage of Playing Time at Small Forward">SF</td>
+					<th title="Percentage of Playing Time at Power Forward">PF</td>
+					<th title="Percentage of Playing Time at Center">C</td>
 					<th class="text_left" title="Notes">Notes</th>
 					<th class="text_center" title="References">Ref</th>
 				</tr>
@@ -817,6 +822,11 @@
 					<td><?php echo $this_player->current_year[0]["weight"]; ?></td>
 					<td class="text_center"><?php echo $this_player->current_year[0]["position"]; ?></td>
 					<td class="border_right text_center"><?php echo $this_player->current_year[0]["position_real"]; ?></td>
+					<td><?php echo $this_player->current_year[ 0 ][ "pos_PG" ]; ?></td>
+					<td><?php echo $this_player->current_year[ 0 ][ "pos_SG" ]; ?></td>
+					<td><?php echo $this_player->current_year[ 0 ][ "pos_SF" ]; ?></td>
+					<td><?php echo $this_player->current_year[ 0 ][ "pos_PF" ]; ?></td>
+					<td class="border_right"><?php echo $this_player->current_year[ 0 ][ "pos_C" ]; ?></td>
 					<td class="text_left"><?php echo $this_player->current_year[0]["notes"]; ?></td>
 					<td class="text_center"><?php echo implode( ",", $these_refs_new ); ?></td>
 				</tr>
