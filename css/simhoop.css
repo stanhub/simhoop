@@ -139,13 +139,13 @@ td.border_right { border-right: 1px solid #999999; }
 PLAYER overrides
 ********** */
 
-#player #tab-notes thead th:nth-of-type( 11 ) { width: 825px; } /* notes column */
+#player #tab-notes thead th:nth-of-type( 16 ) { width: 825px; } /* notes column */
 
 /* **********
 TEAM overrides
 ********** */
 
-#team #tab-notes thead th:nth-of-type( 11 ) { width: 825px; } /* notes column */
+#team #tab-notes thead th:nth-of-type( 16 ) { width: 825px; } /* notes column */
 
 /* **********
 MISCELLANEOUS
