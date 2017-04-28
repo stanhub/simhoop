@@ -54,11 +54,13 @@ $( document ).ready( function() {
 	</form>
 
 
-	<p><a href="_calculateTOTpace.php?id=<?php echo $current_year; ?>" target="_blank">
+	<p><a href="_calculateTOTpace.php?id=<?php echo $current_year; ?>&amp;league=<?php echo $current_league; ?>" target="_blank">
 		Calculate Pace for TOT's</a></p>
-	<p><a href="_calculatePositionReal.php?id=<?php echo $current_year; ?>" target="_blank">
+	<p><a href="_calculatePositionReal.php?id=<?php echo $current_year; ?>&amp;league=<?php echo $current_league; ?>" target="_blank">
 		Calculate Position Real Numbers (ex: 3.02)</a>
-	<p><a href="_matchHeightWeight.php?id=<?php echo $current_year; ?>" target="_blank">
+	<p><a href="_findUnmarkedPartials.php?id=<?php echo $current_year; ?>&amp;league=<?php echo $current_league; ?>" target="_blank">
+		Find unmarked Partial rows</a></p>
+	<p><a href="_matchHeightWeight.php?id=<?php echo $current_year; ?>&amp;league=<?php echo $current_league; ?>" target="_blank">
 		Match NBA height/weight to previous NBA height/weight</a></p>
 
 </div>
