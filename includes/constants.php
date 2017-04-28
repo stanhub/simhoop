@@ -5,6 +5,11 @@
 	// doesn't need connection to DB
 	// ******************
 
+	// are we in /admin folder
+	if ( !isset( $is_this_admin ) ) {
+		$is_this_admin = false;
+	}
+
 	// let's show errors!
 	if ( isset( $_GET[ "show_errors" ] ) ) {
 		ini_set( "display_errors", 1 );

@@ -14,16 +14,16 @@ class Player {
 	public $current_year, $current_year_count, $current_total, $current_total_count;
 
 	// constructed properties: per game
-	public $per_game; // array ( MIN, FG, FGA, TP, TPA, FT, FTA, ORB, TRB, AST, STL, BLK, TOV, PF, PTS )
+	public $per_game; // array ( MIN, FG, FGA, TP, TPA, FT, FTA, ORB, TRB, AST, STL, BLK, TOV, PF, TF, PTS )
 
 	// constructed properties: per 36 min
-	public $per_36_min; // array ( FG, FGA, TP, TPA, FT, FTA, ORB, TRB, AST, STL, BLK, TOV, PF, PTS )
+	public $per_36_min; // array ( FG, FGA, TP, TPA, FT, FTA, ORB, TRB, AST, STL, BLK, TOV, PF, TF, PTS )
 
 	// constructed properties: per 100 poss
-	public $per_100_poss; // array ( FG, FGA, TP, TPA, FT, FTA, ORB, TRB, AST, STL, BLK, TOV, PF, PTS )
+	public $per_100_poss; // array ( FG, FGA, TP, TPA, FT, FTA, ORB, TRB, AST, STL, BLK, TOV, PF, TF, PTS )
 
 	// constructed properties: per 100 poss
-	public $per_75_poss; // array ( FG, FGA, TP, TPA, FT, FTA, ORB, TRB, AST, STL, BLK, TOV, PF, PTS )
+	public $per_75_poss; // array ( FG, FGA, TP, TPA, FT, FTA, ORB, TRB, AST, STL, BLK, TOV, PF, TF, PTS )
 
 	// constructed properties: other
 	public $height_formatted, $display_name;
@@ -140,6 +140,10 @@ class Player {
 			if ( !is_null( $this->current_total[$i]["PF"] ) ) {
 				$this->per_game[$i]["PF"] = number_format( ( $this->current_total[$i]["PF"] / $this->current_total[$i]["GP"] ), 1 );
 			}
+			$this->per_game[$i]["TF"] = "";
+			if ( !is_null( $this->current_total[$i]["TF"] ) ) {
+				$this->per_game[$i]["TF"] = number_format( ( $this->current_total[$i]["TF"] / $this->current_total[$i]["GP"] ), 1 );
+			}
 			$this->per_game[$i]["PTS"] = "";
 			if ( !is_null( $this->current_total[$i]["PTS"] ) ) {
 				$this->per_game[$i]["PTS"] = number_format( ( $this->current_total[$i]["PTS"] / $this->current_total[$i]["GP"] ), 1 );
@@ -174,6 +178,7 @@ class Player {
 				$this->per_36_min[$i]["BLK"] = "";
 				$this->per_36_min[$i]["TOV"] = "";
 				$this->per_36_min[$i]["PF"] = "";
+				$this->per_36_min[$i]["TF"] = "";
 				$this->per_36_min[$i]["PTS"] = "";
 
 			} else {
@@ -210,6 +215,10 @@ class Player {
 					$this->per_36_min[$i]["TOV"] = number_format( ( ( $this->current_total[$i]["TOV"] / $this->current_total[$i]["MIN"] ) * 36 ), 1 );
 				}
 				$this->per_36_min[$i]["PF"] = number_format( ( ( $this->current_total[$i]["PF"] / $this->current_total[$i]["MIN"] ) * 36 ), 1 );
+				$this->per_36_min[$i]["TF"] = "";
+				if ( $this->current_total[$i]["TF"] !== NULL ) {
+					$this->per_36_min[$i]["TF"] = number_format( ( ( $this->current_total[$i]["TF"] / $this->current_total[$i]["MIN"] ) * 36 ), 1 );
+				}
 				$this->per_36_min[$i]["PTS"] = number_format( ( ( $this->current_total[$i]["PTS"] / $this->current_total[$i]["MIN"] ) * 36 ), 1 );
 
 			}
@@ -245,6 +254,7 @@ class Player {
 				$this->per_100_poss[$i]["BLK"] = "";
 				$this->per_100_poss[$i]["TOV"] = "";
 				$this->per_100_poss[$i]["PF"] = "";
+				$this->per_100_poss[$i]["TF"] = "";
 				$this->per_100_poss[$i]["PTS"] = "";
 
 				// set empty per75poss
@@ -261,6 +271,7 @@ class Player {
 				$this->per_75_poss[$i]["BLK"] = "";
 				$this->per_75_poss[$i]["TOV"] = "";
 				$this->per_75_poss[$i]["PF"] = "";
+				$this->per_75_poss[$i]["TF"] = "";
 				$this->per_75_poss[$i]["PTS"] = "";
 
 			} else {
@@ -299,6 +310,10 @@ class Player {
 					$this->per_100_poss[$i]["TOV"] = number_format( ( ( ( $this->current_total[$i]["TOV"] / ( $temp_poss ) ) * 100 ) ), 1);
 				}
 				$this->per_100_poss[$i]["PF"] = number_format( ( ( ( $this->current_total[$i]["PF"] / ( $temp_poss ) ) * 100 ) ), 1);
+				$this->per_100_poss[$i]["TF"] = "";
+				if ( $this->current_total[$i]["TF"] !== NULL ) {
+					$this->per_100_poss[$i]["TF"] = number_format( ( ( ( $this->current_total[$i]["TF"] / ( $temp_poss ) ) * 100 ) ), 1);
+				}
 				$this->per_100_poss[$i]["PTS"] = number_format( ( ( ( $this->current_total[$i]["PTS"] / ( $temp_poss ) ) * 100 ) ), 1);
 
 				// set per75poss
@@ -333,6 +348,10 @@ class Player {
 					$this->per_75_poss[$i]["TOV"] = number_format( ( ( ( $this->current_total[$i]["TOV"] / ( $temp_poss ) ) * 75 ) ), 1);
 				}
 				$this->per_75_poss[$i]["PF"] = number_format( ( ( ( $this->current_total[$i]["PF"] / ( $temp_poss ) ) * 75 ) ), 1);
+				$this->per_75_poss[$i]["TF"] = "";
+				if ( $this->current_total[$i]["TF"] !== NULL ) {
+					$this->per_75_poss[$i]["TF"] = number_format( ( ( ( $this->current_total[$i]["TF"] / ( $temp_poss ) ) * 75 ) ), 1);
+				}
 				$this->per_75_poss[$i]["PTS"] = number_format( ( ( ( $this->current_total[$i]["PTS"] / ( $temp_poss ) ) * 75 ) ), 1);
 
 			}

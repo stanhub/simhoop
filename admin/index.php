@@ -56,8 +56,8 @@ $( document ).ready( function() {
 
 	<p><a href="_calculateTOTpace.php?id=<?php echo $current_year; ?>" target="_blank">
 		Calculate Pace for TOT's</a></p>
-	<!--p><a href="_calculatePositionReal.php?id=<?php echo $current_year; ?>" target="_blank">
-		Calculate Position Real Numbers (ex: 3.02)</a-->
+	<p><a href="_calculatePositionReal.php?id=<?php echo $current_year; ?>" target="_blank">
+		Calculate Position Real Numbers (ex: 3.02)</a>
 	<p><a href="_matchHeightWeight.php?id=<?php echo $current_year; ?>" target="_blank">
 		Match NBA height/weight to previous NBA height/weight</a></p>
 
