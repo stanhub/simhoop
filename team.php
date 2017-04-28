@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
 
 <?php
@@ -331,7 +331,7 @@
 					<td><?php echo $this_player->current_total[0]["BLK"]; ?></td>
 					<td><?php echo $this_player->current_total[0]["TOV"]; ?></td>
 					<td><?php echo $this_player->current_total[0]["PF"]; ?></td>
-					<td></td>
+					<td><?php echo $this_player->current_total[0]["TF"]; ?></td>
 					<td><?php echo $this_player->current_total[0]["PTS"]; ?></td>
 <?php
 		} else {
@@ -452,7 +452,7 @@
 					<td><?php echo $this_player->per_game[0]["BLK"]; ?></td>
 					<td><?php echo $this_player->per_game[0]["TOV"]; ?></td>
 					<td><?php echo $this_player->per_game[0]["PF"]; ?></td>
-					<td></td>
+					<td><?php echo $this_player->per_game[0]["TF"]; ?></td>
 					<td><?php echo $this_player->per_game[0]["PTS"]; ?></td>
 <?php
 		} else {
@@ -549,7 +549,7 @@
 					<td><?php echo $this_player->per_36_min[0]["BLK"]; ?></td>
 					<td><?php echo $this_player->per_36_min[0]["TOV"]; ?></td>
 					<td><?php echo $this_player->per_36_min[0]["PF"]; ?></td>
-					<td></td>
+					<td><?php echo $this_player->per_36_min[0]["TF"]; ?></td>
 					<td><?php echo $this_player->per_36_min[0]["PTS"]; ?></td>
 <?php
 		} else {
@@ -647,7 +647,7 @@
 					<td><?php echo $this_player->per_100_poss[0]["BLK"]; ?></td>
 					<td><?php echo $this_player->per_100_poss[0]["TOV"]; ?></td>
 					<td><?php echo $this_player->per_100_poss[0]["PF"]; ?></td>
-					<td></td>
+					<td><?php echo $this_player->per_100_poss[0]["TF"]; ?></td>
 					<td><?php echo $this_player->per_100_poss[0]["PTS"]; ?></td>
 <?php
 		} else {
@@ -745,7 +745,7 @@
 					<td><?php echo $this_player->per_75_poss[0]["BLK"]; ?></td>
 					<td><?php echo $this_player->per_75_poss[0]["TOV"]; ?></td>
 					<td><?php echo $this_player->per_75_poss[0]["PF"]; ?></td>
-					<td></td>
+					<td><?php echo $this_player->per_75_poss[0]["TF"]; ?></td>
 					<td><?php echo $this_player->per_75_poss[0]["PTS"]; ?></td>
 <?php
 		} else {
